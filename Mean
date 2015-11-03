@@ -1,0 +1,21 @@
+package MyPackage;
+
+import java.util.*;
+
+public class ArithmeticMean {
+	static int count;
+	static int sum = 0;
+	public static void main(String[] args) {
+				
+		for (count = 0; ; count++) {
+			System.out.println("Введите число");
+			Scanner ss = new Scanner(System.in);
+			sum += ss.nextInt();
+			if (ss.nextInt() == 999) {
+				break;
+			}
+		}
+		System.out.println("Mean = " + (sum / count));
+
+	}
+}
