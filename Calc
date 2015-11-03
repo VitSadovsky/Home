@@ -1,31 +1,40 @@
 package MyPackage;
+
 import java.util.*;
+
 public class MyCalc {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-				System.out.println("Please input first number: ");
-				double d1 = sc.nextDouble();
-		        System.out.println("Your input " + d1 + " as a first number");
-		               
-		        System.out.println("Please input second number: ");
-		        double d2 = sc.nextDouble();
-				
-		        
-				
-				
-				System.out.println("Sum is " + (d1+d2));
-				System.out.println("Difference is " + (d1-d2));
-				System.out.println("Multiplication is " + (d1*d2));
-				
-				if (d2==0)
-					System.out.println("Невозможно посчитать:" + " На ноль делить нельзя");
-				else
-					System.out.println("Division is " + (d1/d2));
-				
-				
-				
+		System.out.println("Please input first number: ");
+		double d1 = sc.nextDouble();
+		System.out.println("Your input " + d1 + " as a first number");
+
+		System.out.println("Please input second number: ");
+		double d2 = sc.nextDouble();
+		System.out.println("Your input " + d2 + " as a second number");
+
+		System.out.println("Please input operation simbol: ");
+		String OpSimbol = sc.next();
+
+		switch (OpSimbol) {
+		case "+":
+			System.out.println("Sum is " + (d1 + d2));
+			break;
+		case "-":
+			System.out.println("Sum is " + (d1 - d2));
+			break;
+		case "*":
+			System.out.println("Sum is " + (d1 * d2));
+			break;
+		case "/":
+			if (d2 == 0)
+				System.out.println("Невозможно посчитать:" + " На ноль делить нельзя");
+			else
+				System.out.println("Division is " + (d1 / d2));
+			break;
+		}
+
 	}
 
 }
-
