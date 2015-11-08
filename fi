@@ -1,0 +1,28 @@
+package MyPackage;
+
+import java.util.*;
+
+public class MyClass{
+	
+
+	public static void main(String[] args) {
+		System.out.println("Введите число и нажмите Enter");
+	     int a = 1;
+	     int b = 1;
+	     int fibLast = 0;
+	     Scanner s = new Scanner(System.in);
+	     int n = s.nextInt();
+	     
+	     for(int i = 0; i < n; i++){
+	       if(i==0){ fibLast = a;}
+	       else if (i==1){fibLast = b;}
+	       else{  fibLast = a + b;
+	       
+	         a = b;
+	         b = fibLast;
+	         //System.out.print(fibLast);  
+	     }
+	    System.out.print(fibLast + " ");
+	     }
+	     }
+	}
