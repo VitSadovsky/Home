@@ -1,0 +1,34 @@
+package MyPackage;
+import java.util.*;
+
+public class MyClass {
+
+
+    public static void main(String[] args) {
+        String[] Students = {"Student1", "Student2", "Student3", "Student4", "Student5"};
+
+        System.out.println("Стартовый массив: " + Arrays.asList(Students));
+
+        System.out.println("Добавление элемента: " + Arrays.asList(addToArray(Students, "Student6")));
+
+        System.out.println("Проверка по фамилии: " + Arrays.asList(contains(Students, "Student2")));
+    }
+//добавление элемента
+        public static String[] addToArray (String[]array, String name){
+            String[] result = new String[array.length + 1];
+            System.arraycopy(array, 0, result, 0, array.length);
+            result[result.length - 1] = name;
+            return result;
+        }
+
+//Проверка на содержание элемента по фамилии
+    public static String contains(String[] array, String name){
+    boolean b = Arrays.asList(array).contains(name);
+    String result;
+    if (b){result = "содержит";}
+        else{result = "не содержит";}
+        return result;
+        }
+
+   
+}
