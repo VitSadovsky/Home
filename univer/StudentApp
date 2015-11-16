@@ -1,0 +1,23 @@
+package MyPackage;
+import java.util.*;
+import java.lang.*;
+
+
+public class StudentApp {
+    public static void main(String[] args) {
+
+        Student Ivanov = new Student("Ivan", "Ivanov", 5, 5);
+        Student Rebrov = new Student("Vitalik", "Rebrov", 1, 5);
+        Student Petrov = new Student("Vova", "Petrov", 5, 2);
+        Student Sidorov = new Student("Viltor", "Sidorov", 3, 3);
+        Student Golubev = new Student("Vova", "Golubev", 4, 4);
+        Student Serebrov = new Student("Vitalik", "Serebrov", 2, 4);
+        Student Silikonov = new Student("Vitya", "Silikonov", 5, 3);
+        Student Lolikov = new Student("Olya", "Lolikov", 5, 1);
+
+        Institute.group171.addStudent(Ivanov);
+        Institute.group172.addStudent(Rebrov);
+
+        System.out.println(Ivanov.getName());
+    }
+}
