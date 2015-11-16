@@ -1,0 +1,8 @@
+package MyPackage;
+import java.util.*;
+
+public class Institute {
+
+    static Group group171 = new Group(171, "management");
+    static Group group172 = new Group(172, "accounting");
+}
