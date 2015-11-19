@@ -13,6 +13,7 @@ public class Student {
         this.surname = surname;
         this.math = math;
         this.philosophy = philosophy;
+
     }
 
     public int getPhilosophy() {
