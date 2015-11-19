@@ -1,8 +1,16 @@
 package MyPackage;
+import java.lang.reflect.Array;
 import java.util.*;
+
 
 public class Institute {
 
-    static Group group171 = new Group(171, "management");
-    static Group group172 = new Group(172, "accounting");
+    static ArrayList <Group> instituteList = new ArrayList<Group>();
+
+        static public void addGroup(Group o){
+       instituteList.add(o);
+    }
+
+   static Group group171 = new Group(171, "management");
+   static Group group172 = new Group(172, "accounting");
 }
