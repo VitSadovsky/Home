@@ -15,8 +15,8 @@ public class StudentApp {
         Student Silikonov = new Student("Vitya", "Silikonov", 5, 3);
         Student Lolikov = new Student("Olya", "Lolikov", 5, 1);
 
-        Institute.group171.addStudent(Ivanov);
-        Institute.group172.addStudent(Rebrov);
+        Institute.group171.addStudent(Ivanov, 171);
+        Institute.group172.addStudent(Rebrov, 172);
 
         System.out.println(Ivanov.getName());
     }
