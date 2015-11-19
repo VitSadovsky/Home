@@ -2,31 +2,35 @@ package MyPackage;
 import java.util.*;
 import java.lang.*;
 
+
 public class Group {
 
     private int groupId;
     private String speciality;
-    ArrayList <Student> group;
+    ArrayList <Student> groupList;
 
     public Group(int groupId, String speciality) {
         this.groupId = groupId;
         this.speciality = speciality;
-        group = new ArrayList<Student>();
+        groupList = new ArrayList<Student>();
+        Institute.addGroup(Group.this);
     }
 
-    public void addStudent(Student A, int groupNum){
-        if (groupNum==Group.**groupId**);
-        Group.**group**.add(A);
+    public void addStudent(Student s, int groupNum){
+        for(Group g : **instituteList){
+        if(groupNum==g.groupId);
+        g.groupList.add(s);
+        }
     }
 
-    public void removeStudent(Student A){
-        group.remove(A);
+    public void contains (Student A) {
+        for (Group g : **instituteList) {
+            if (g.groupList.contains(A))
+                System.out.println("Группа содержит" + A);
+            else {
+                System.out.println("Группа не содержит" + A);
             }
-
-    public void contains (Student A){
-        if(group.contains(A))
-            System.out.println("Группа содержит" + A);
-        else {System.out.println("Группа не содержит" + A);}
+        }
     }
 
     public int getGroupId() {
