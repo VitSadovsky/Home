@@ -5,8 +5,8 @@ public class Student {
 
     private String name;
     private String surname;
-    int math;
-    int philosophy;
+    private int math;
+    private int philosophy;
 
     public Student(String name, String surname, int math, int philosophy) {
         this.name = name;
