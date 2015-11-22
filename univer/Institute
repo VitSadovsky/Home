@@ -4,13 +4,17 @@ import java.util.*;
 
 
 public class Institute {
+   ArrayList <Group> groupList;
+    String instituteName;
 
-    static ArrayList <Group> instituteList = new ArrayList<Group>();
-
-        static public void addGroup(Group o){
-       instituteList.add(o);
+    public Institute(String instituteName) {
+        this.instituteName = instituteName;
+        groupList = new ArrayList<Group>();
     }
 
-   static Group group171 = new Group(171, "management");
-   static Group group172 = new Group(172, "accounting");
+      void addGroup(Group group){
+         groupList.add(group);
+    }
+
+
 }
