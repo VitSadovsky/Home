@@ -7,31 +7,30 @@ public class Group {
 
     private int groupId;
     private String speciality;
-    ArrayList <Student> groupList;
+    private ArrayList <Student> studentList;
 
     public Group(int groupId, String speciality) {
         this.groupId = groupId;
         this.speciality = speciality;
-        groupList = new ArrayList<Student>();
-        Institute.addGroup(Group.this);
-    }
-
-    public void addStudent(Student s, int groupNum){
-        for(Group g : **instituteList){
-        if(groupNum==g.groupId);
-        g.groupList.add(s);
+        studentList = new ArrayList<Student>();
         }
-    }
 
-    public void contains (Student A) {
-        for (Group g : **instituteList) {
-            if (g.groupList.contains(A))
-                System.out.println("Группа содержит" + A);
-            else {
-                System.out.println("Группа не содержит" + A);
+    public void addStudent(Student s){
+        studentList.add(s);
+        }
+
+    public void contains (String A) {
+        int count = 0;
+        for (Student s : studentList) {
+            if (A.equals(s.getSurname()))
+            {count++;
             }
         }
+        if(count>=1){System.out.println("Группа содержит " + A);}
+        else {System.out.println("Группа не содержит " + A);}
+
     }
+
 
     public int getGroupId() {
         return groupId;
@@ -47,5 +46,9 @@ public class Group {
 
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
+    }
+
+    public ArrayList<Student> getStudentList() {
+        return studentList;
     }
 }
